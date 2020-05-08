@@ -1,0 +1,23 @@
+<!--templates/home.html-->
+{% extends '_base.html' %}
+
+{% load static %}
+{% load socialaccount %}
+
+print(STATIC_URL)
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<h1>Home Page</h1>
+<p>{{now}}</p>
+<img class="bookcover" src="{% static 'images/r.jpg' %}">
+<br>
+{% if user.is_authenticated %}
+    HI {{ user.email }}!
+    <p><br><a href="{% url 'account_logout' %}">Log out</a></p>
+{% else %}
+    <p>Your not logged in buddy </p>
+    <a href="{% url 'account_login' %}">Login</a>
+    <a href="{% url 'account_signup' %}">Signup</a>
+{% endif %}
+{% endblock content %}
