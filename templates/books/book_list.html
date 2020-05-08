@@ -1,0 +1,22 @@
+<!-- templates/books/book_list.html -->
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block title %}Books{% endblock title %}
+
+        <!--CSS-->
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+{% block content %}
+
+{% for book in book_list %}
+    <div>
+        <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
+        <!--<h2><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></h2>
+        <h3><a href="">{{ book.author }}</a></h3>
+        <h4><a href="">{{ book.price }}</a></h4>-->
+    </div>
+{% endfor %}
+
+{% endblock content %}

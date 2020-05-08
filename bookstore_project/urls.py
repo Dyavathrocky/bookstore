@@ -29,4 +29,7 @@ urlpatterns = [
     #pages apps .
     path('',include('pages.urls')),
 
+    #books app
+    path('books/',include('books.urls')),
+
 ]
