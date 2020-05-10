@@ -194,4 +194,6 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 DETAIL_FROM_EMAIL = 'admin@jangobookstore.com'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 
