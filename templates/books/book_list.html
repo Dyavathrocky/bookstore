@@ -13,8 +13,8 @@
 {% for book in book_list %}
     <div>
         <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
-        <!--<h2>{{book.cover}}</h2>
-        <h2><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></h2>
+        <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
+        <!--<h2><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></h2>
         <h3><a href="">{{ book.author }}</a></h3>
         <h4><a href="">{{ book.price }}</a></h4>-->
     </div>
