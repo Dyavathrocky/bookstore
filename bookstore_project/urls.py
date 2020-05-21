@@ -34,4 +34,7 @@ urlpatterns = [
     #books app
     path('books/',include('books.urls')),
 
+    #for orders app
+    path('orders/' , include('orders.urls')),
+
 ] + static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)

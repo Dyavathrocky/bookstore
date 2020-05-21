@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
     'books.apps.BooksConfig',
+    'orders.apps.OrdersConfig',
 
 
 
@@ -197,3 +198,5 @@ DETAIL_FROM_EMAIL = 'admin@jangobookstore.com'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 
+STRIPE_TEST_PUBLISHABLE_KEY = 'pk_test_QpXq2jKew5UOLqKd1e7fozoq00gPNJeYuB'
+STRIPE_TEST_SECRET_KEY = 'sk_test_0wPOzZ87kITkZXVyhvQzurI1008nDfQQna'
